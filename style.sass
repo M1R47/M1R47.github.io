@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@200&family=Fondamento&family=Yuji+Boku&display=swap')
+
+*
+  margin: 0
+  padding: 0
+  scroll-behavior: smooth
+  font-family: 'Yuji Boku', serif
+
+body
+  height: 100vh
+  width: 100%
+  
+ ul
+  margin-bottom: 0
+
+.logo
+  color: #fff
+  font-size: 1.5rem
+  font-weight: bold
+
+nav
+  height: 75px
+  width: 100%
+  background: #fff
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+   text-align: center
+  align-items: center
+  padding: 0 1rem
+  margin: 0
+  background: linear-gradient(-8deg, transparent 20px, #000 0)
+
+  .navbar
+      text-align: center
+      align-items: center
+      transition: all 0.5s
+
+      .nav-menu
+          display: flex
+          margin: 0 auto
+          text-align: center
+          align-items: center
+          justify-content: space-around
+
+          li
+              list-style: none
+
+          .nav-link
+              color: #fff
+              text-decoration: none
+              font-size: 1.3rem
+              transition: 0.5s
+              &:hover
+                color: orange
+              &::before
+                width: 500%
+              &::after
+                width: 500%
+
+      .hamburger
+          display: none
+
+          .bar,
+          .fa-times
+              width: 1.5rem
+              height: 3px
+              display: block
+              color: #fff
+              padding: 0
+              margin: 6px
+              transition: 0.5s
+              background-color: #fff
+
+@media (max-width: 680px)
+  .hamburger
+    display: block
+
+  &.active .bar:nth-child(2)
+    opacity: 0
+
+  &.active .bar:nth-child(1)
+    transform: translateY(8px) rotate(-315deg)
+
+  &.active .bar:nth-child(3)
+    transform: translateY(-10px) rotate(-45deg)
+
+  .nav-menu
+      width: 100%
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      position: fixed
+      top: 75px
+      left: -100%
+      transition: 0.5s
+      margin: 0 auto
+    
+      .nav-link
+          margin: 1rem 0
+          color: #000
+          z-index: 1
+
+  &.active
+    left: 0
+    z-index: 100
